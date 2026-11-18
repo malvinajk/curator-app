@@ -17,7 +17,7 @@ const VisitorTracker = () => {
     <section>
         <div className='flex flex-row'>
             <TrackerButton label="+" handleClick={addOne} />
-            <TrackerButton label="-" handleClick={subtractOne} isDisabled={count == 0} />
+            <TrackerButton label="-" handleClick={subtractOne} isDisabled={count === 0} />
         </div>
         <h3>Total: {count}</h3>
     </section>
