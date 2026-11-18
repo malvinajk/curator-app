@@ -9,15 +9,16 @@ const VisitorTracker = () => {
         setCount(count + 1);
     }
     function subtractOne() {
-        setCount(count > 0 ? count - 1 : count);
+        setCount(count - 1);
     }
 
   return (
     <>
     <section>
-        <TrackerButton label="+" handleClick={addOne} />
-        <TrackerButton label="-" handleClick={subtractOne} />
-        
+        <div className='flex flex-row'>
+            <TrackerButton label="+" handleClick={addOne} />
+            <TrackerButton label="-" handleClick={subtractOne} isDisabled={count == 0} />
+        </div>
         <h3>Total: {count}</h3>
     </section>
     </>
